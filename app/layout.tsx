@@ -1,10 +1,10 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const josefinSans = Poppins({
-	variable: "--font-josefin-sans",
+const josefinSans = Outfit({
+	variable: "--font-outfit",
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700"],
 });

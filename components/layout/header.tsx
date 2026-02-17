@@ -20,18 +20,16 @@ export default function Header({ isPro }: { isPro: boolean }) {
 					{isSignedIn && (
 						<nav className="hidden md:flex items-center gap-6">
 							<Link href="/dashboard">
-								<Button variant={"ghost"} size={"sm"}>
-									Dashboard
-								</Button>
+								<Button variant="ghost">Dashboard</Button>
 							</Link>
 							<Link href="/communities">
-								<Button variant={"ghost"} size={"sm"}>
+								<Button variant="ghost">
 									<UsersIcon className="size-4 text-primary" />
 									Communities
 								</Button>
 							</Link>
 							<Link href="/chat">
-								<Button variant={"ghost"} size={"sm"}>
+								<Button variant="ghost">
 									<MessageCircleIcon className="size-4 text-primary" />
 									Chat
 								</Button>
@@ -47,7 +45,7 @@ export default function Header({ isPro }: { isPro: boolean }) {
 									className="flex items-center gap-2"
 									variant="outline"
 								>
-									<TrophyIcon className="size-3 text-primary" />{" "}
+									<TrophyIcon className="size-3 text-primary" />
 									Pro
 								</Badge>
 							) : (
@@ -64,12 +62,10 @@ export default function Header({ isPro }: { isPro: boolean }) {
 					) : (
 						<div className="flex items-center gap-2">
 							<Link href="/sign-in">
-								<Button variant="ghost" size={"sm"}>
-									Sign In
-								</Button>
+								<Button variant="ghost">Sign In</Button>
 							</Link>
 							<Link href="/sign-up">
-								<Button size="sm">Sign Up</Button>
+								<Button>Sign Up</Button>
 							</Link>
 						</div>
 					)}
