@@ -23,6 +23,26 @@ export default function Home() {
 				>
 					<FeaturesSection />
 				</MotionDiv>
+				<MotionDiv
+					initial={{ opacity: 0, y: 30 }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+				>
+					<HowItWorksSection />
+				</MotionDiv>
+
+				<MotionDiv
+					initial={{ opacity: 0, y: 30 }}
+					transition={{ duration: 0.6, delay: 0.4 }}
+				>
+					<PricingSection />
+				</MotionDiv>
+
+				<MotionDiv
+					initial={{ opacity: 0, y: 30 }}
+					transition={{ duration: 0.6, delay: 0.4 }}
+				>
+					<CtaSection />
+				</MotionDiv>
 			</div>
 		</div>
 	);
