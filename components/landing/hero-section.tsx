@@ -1,9 +1,9 @@
-import { RocketIcon, SparkleIcon, ZapIcon } from "lucide-react";
-import { Badge } from "../ui/badge";
-import { HeroGradient } from "./background-gradient";
+import { CornerUpRight, Lightbulb, SparkleIcon } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { MotionDiv } from "../ui/motion-div";
+import { HeroGradient } from "./background-gradient";
 
 export default function HeroSection() {
 	return (
@@ -43,9 +43,9 @@ export default function HeroSection() {
 									className="link-button hero-button-outline group"
 								>
 									<span className="hero-button-content">
-										<RocketIcon className="hero-button-icon-outline group-hover:rotate-12 group-hover:text-primary" />
+										<CornerUpRight className="hero-button-icon-outline group-hover:-rotate-12 group-hover:text-primary" />
 										<span className="hero-button-text">
-											Get Started for Free
+											Get Started
 										</span>
 									</span>
 								</Button>
@@ -64,7 +64,7 @@ export default function HeroSection() {
 									className="link-button hero-button-primary group"
 								>
 									<span className="hero-button-content">
-										<ZapIcon className="hero-button-icon-primary group-hover:scale-125 group-hover:rotate-12" />
+										<Lightbulb className="hero-button-icon-primary group-hover:scale-125" />
 										Buy a Plan
 									</span>
 								</Button>
