@@ -1,13 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { UserButton, useUser } from "@clerk/nextjs";
-import { MessageCircleIcon, TrophyIcon, UsersIcon } from "lucide-react";
+import {
+	LayoutDashboard,
+	MessageCircle,
+	TrophyIcon,
+	Users,
+} from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Badge } from "../ui/badge";
 
 export default function Header({ isPro }: { isPro: boolean }) {
 	const { isSignedIn } = useUser();
+	const pathname = usePathname();
 
 	return (
 		<header>
@@ -20,17 +28,40 @@ export default function Header({ isPro }: { isPro: boolean }) {
 					{isSignedIn && (
 						<nav className="hidden md:flex items-center gap-6">
 							<Link href="/dashboard">
-								<Button variant="ghost">Dashboard</Button>
+								<Button
+									variant={
+										pathname === "/dashboard"
+											? "outline"
+											: "ghost"
+									}
+								>
+									<LayoutDashboard className="size-4 text-primary" />
+									Dashboard
+								</Button>
 							</Link>
 							<Link href="/communities">
-								<Button variant="ghost">
-									<UsersIcon className="size-4 text-primary" />
+								<Button
+									variant={
+										pathname === "/communities"
+											? "outline"
+											: "ghost"
+									}
+								>
+									<Users
+										className={cn("size-4 text-primary")}
+									/>
 									Communities
 								</Button>
 							</Link>
 							<Link href="/chat">
-								<Button variant="ghost">
-									<MessageCircleIcon className="size-4 text-primary" />
+								<Button
+									variant={
+										pathname === "/chat"
+											? "outline"
+											: "ghost"
+									}
+								>
+									<MessageCircle className="size-4 text-primary" />
 									Chat
 								</Button>
 							</Link>
