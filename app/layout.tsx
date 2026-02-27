@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const outfit = Outfit({
 	variable: "--font-outfit",
@@ -25,7 +26,19 @@ export default function RootLayout({
 		<ClerkProvider>
 			<html lang="en">
 				<body className={`${outfit.className} antialiased`}>
-					<QueryProvider>{children}</QueryProvider>
+					<QueryProvider>
+						{children}
+						<Toaster
+							toastOptions={{
+								style: {
+									fontFamily: outfit.style.fontFamily,
+									fontWeight: "400",
+									letterSpacing: "0.25px",
+									fontSize: "14px",
+								},
+							}}
+						/>
+					</QueryProvider>
 				</body>
 			</html>
 		</ClerkProvider>
