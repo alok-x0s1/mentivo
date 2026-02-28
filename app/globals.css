@@ -399,11 +399,11 @@
 		letter-spacing: var(--tracking-normal);
 	}
 	h1 {
-		@apply mb-4 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl;
+		@apply mb-2 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl;
 	}
 
 	h2 {
-		@apply text-3xl sm:text-4xl font-bold mb-4;
+		@apply text-3xl sm:text-4xl font-bold mb-2;
 	}
 
 	p {
@@ -487,11 +487,11 @@
 	}
 
 	.hero-gradient-overlay-hover {
-		@apply absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-transparent;
+		@apply absolute inset-0 bg-linear-to-r from-white/30 via-white/20 to-transparent;
 	}
 
 	.hero-gradient-overlay-animated {
-		@apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent;
+		@apply absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent;
 	}
 }
 

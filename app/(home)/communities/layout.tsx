@@ -19,9 +19,7 @@ export default function CommunitiesLayout({
 				</div>
 				<div>
 					<Link href="/communities/all">
-						<Button variant={"outline"}>
-							+ Join More Communities
-						</Button>
+						<Button variant={"outline"}>+ More Communities</Button>
 					</Link>
 				</div>
 			</div>

@@ -11,7 +11,7 @@ export const userApp = new Hono<{ Variables: Variables }>()
 	.get("/", async (c) => {
 		const user = c.get("user");
 		const { has } = await auth();
-		const isPro = has({ plan: "pro_plan" });
+		const isPro = has({ plan: "creator" });
 		return c.json({
 			...user,
 			isPro,
