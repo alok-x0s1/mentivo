@@ -95,7 +95,8 @@ export default function AddLearningGoal({
 					{showLockIcon && (
 						<LockIcon className="size-4 text-muted-foreground" />
 					)}
-					<PlusIcon className="size-3" /> Add Learning Goal
+					{!showLockIcon && <PlusIcon className="size-3" />} Add
+					Learning Goal
 				</Button>
 			)}
 		</div>
