@@ -73,7 +73,7 @@ export default function Footer() {
 
 	return (
 		<footer className="border-t bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-			<div className="section-container section-padding">
+			<div className="page-wrapper min-h-fit!">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
 					<div className="lg:col-span-2">
 						<div className="mb-6">
@@ -184,7 +184,6 @@ export default function Footer() {
 						</ul>
 					</div>
 
-					{/* Support & Legal */}
 					<div>
 						<h3 className="font-semibold text-sm text-foreground mb-4">
 							Support
