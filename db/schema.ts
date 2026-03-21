@@ -171,3 +171,9 @@ export const conversationSummariesRelations = relations(
 		}),
 	}),
 );
+
+export const newsletterSubscribers = pgTable("newsletter_subscribers", {
+	id: uuid("id").defaultRandom().primaryKey(),
+	email: text("email").notNull().unique(),
+	createdAt: timestamp("created_at").defaultNow().notNull(),
+});
