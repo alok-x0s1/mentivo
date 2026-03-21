@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -19,6 +17,7 @@ import {
 	FileTextIcon,
 	HeartIcon,
 } from "lucide-react";
+import NewsLetter from "./newsletter";
 
 const footerLinks = {
 	product: [
@@ -230,21 +229,7 @@ export default function Footer() {
 							Get the latest updates on new features and learning
 							resources delivered to your inbox.
 						</p>
-						<form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-							<input
-								type="email"
-								placeholder="Enter your email"
-								className="flex-1 h-8 px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-1 focus:ring-ring"
-								required
-							/>
-							<Button
-								type="submit"
-								size="sm"
-								className="px-6 py-4"
-							>
-								Subscribe
-							</Button>
-						</form>
+						<NewsLetter />
 					</div>
 				</div>
 
