@@ -7,6 +7,7 @@ import { userApp } from "@/app/server/user-routes";
 import { learningGoalsApp } from "@/app/server/learning-goals-routes";
 import { matchesApp } from "@/app/server/matches-routes";
 import { conversationsApp } from "@/app/server/conversations-routes";
+import { newsletterApp } from "@/app/server/newsletter-routes";
 
 type Variables = {
 	userId: string;
@@ -60,7 +61,8 @@ const routes = app
 	.route("/communities", learningGoalsApp)
 	.route("/matches", matchesApp)
 	.route("/conversations", conversationsApp)
-	.route("/user", userApp);
+	.route("/user", userApp)
+	.route("/newsletter", newsletterApp);
 
 export type AppType = typeof routes;
 
