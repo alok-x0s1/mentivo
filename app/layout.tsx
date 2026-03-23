@@ -29,7 +29,7 @@ export default function RootLayout({
 					<QueryProvider>
 						{children}
 						<Toaster
-							position="top-right"
+							position="bottom-right"
 							toastOptions={{
 								style: {
 									fontFamily: outfit.style.fontFamily,
