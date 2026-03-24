@@ -176,23 +176,27 @@ export default function ChatPage() {
 								className="flex w-full cursor-pointer hover:bg-accent transition-colors duration-200"
 								onClick={() => router.push(`/chat/${match.id}`)}
 							>
-								<CardContent className="flex items-center gap-4 p-4">
-									<UserAvatar
-										name={partner.name}
-										imageUrl={partner.imageUrl}
-									/>
+								<CardContent className="flex flex-col items-start gap-2 p-4">
+									<div className="flex gap-4 items-center">
+										<UserAvatar
+											name={partner.name}
+											imageUrl={partner.imageUrl}
+										/>
+										<div className="flex flex-col">
+											<CardTitle className="text-md truncate font-semibold">
+												{match.partner.name}
+											</CardTitle>
+											{match.community && (
+												<p className="text-sm text-muted-foreground truncate font-medium">
+													{match.community.name}
+												</p>
+											)}
+										</div>
+									</div>
 									<div className="flex-1">
-										<CardTitle className="text-lg truncate font-semibold">
-											{match.partner.name}
-										</CardTitle>
-										{match.community && (
-											<p className="text-sm text-muted-foreground truncate font-medium">
-												{match.community.name}
-											</p>
-										)}
-										<div className="flex flex-wrap gap-1 mt-1">
+										<div className="flex flex-col gap-1 mt-1">
 											{match.userGoals && (
-												<span className="text-xs text-muted-foreground">
+												<span className="text-sm text-muted-foreground">
 													Your goals:{" "}
 													{match.userGoals
 														.map((g) => g.title)
@@ -203,7 +207,7 @@ export default function ChatPage() {
 												match.partnerGoals.length >
 													0 && (
 													<span className="text-xs text-muted-foreground">
-														| Their goals:{" "}
+														Their goals:{" "}
 														{match.partnerGoals
 															.map((g) => g.title)
 															.join(", ")}
