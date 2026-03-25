@@ -2,20 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import {
-	GithubIcon,
-	TwitterIcon,
-	LinkedinIcon,
+	AwardIcon,
+	BookOpenIcon,
+	BotIcon,
+	BriefcaseIcon,
+	Building2Icon,
+	CircleHelpIcon,
+	CookieIcon,
+	FileTextIcon,
+	GraduationCapIcon,
+	HelpCircleIcon,
+	LightbulbIcon,
+	LockIcon,
 	MailIcon,
-	MessageCircleIcon,
+	MegaphoneIcon,
+	MessageSquareMoreIcon,
+	NewspaperIcon,
+	ScaleIcon,
+	ShieldCheckIcon,
 	TrophyIcon,
 	UsersIcon,
-	BookOpenIcon,
-	GraduationCapIcon,
-	LightbulbIcon,
-	ShieldIcon,
-	HelpCircleIcon,
-	FileTextIcon,
-	HeartIcon,
+	TwitterIcon,
+	GithubIcon,
+	LinkedinIcon,
 } from "lucide-react";
 import NewsLetter from "./newsletter";
 
@@ -24,31 +33,35 @@ const footerLinks = {
 		{ href: "#features", label: "Features", icon: LightbulbIcon },
 		{ href: "#pricing", label: "Pricing", icon: TrophyIcon },
 		{ href: "/communities", label: "Communities", icon: UsersIcon },
-		{ href: "/chat", label: "AI Chat", icon: MessageCircleIcon },
+		{ href: "/chat", label: "AI Chat", icon: BotIcon },
 	],
+
 	learning: [
 		{ href: "/courses", label: "Courses", icon: BookOpenIcon },
 		{ href: "/tutorials", label: "Tutorials", icon: GraduationCapIcon },
 		{ href: "/resources", label: "Resources", icon: FileTextIcon },
-		{ href: "/certificates", label: "Certificates", icon: TrophyIcon },
+		{ href: "/certificates", label: "Certificates", icon: AwardIcon },
 	],
+
 	company: [
-		{ href: "/about", label: "About Us", icon: UsersIcon },
-		{ href: "/careers", label: "Careers", icon: GraduationCapIcon },
-		{ href: "/blog", label: "Blog", icon: FileTextIcon },
-		{ href: "/press", label: "Press", icon: MessageCircleIcon },
+		{ href: "/about", label: "About Us", icon: Building2Icon },
+		{ href: "/careers", label: "Careers", icon: BriefcaseIcon },
+		{ href: "/blog", label: "Blog", icon: NewspaperIcon },
+		{ href: "/press", label: "Press", icon: MegaphoneIcon },
 	],
+
 	support: [
 		{ href: "/help", label: "Help Center", icon: HelpCircleIcon },
 		{ href: "/contact", label: "Contact Us", icon: MailIcon },
-		{ href: "/faq", label: "FAQ", icon: MessageCircleIcon },
-		{ href: "/feedback", label: "Feedback", icon: LightbulbIcon },
+		{ href: "/faq", label: "FAQ", icon: CircleHelpIcon },
+		{ href: "/feedback", label: "Feedback", icon: MessageSquareMoreIcon },
 	],
+
 	legal: [
-		{ href: "/privacy", label: "Privacy Policy", icon: ShieldIcon },
-		{ href: "/terms", label: "Terms of Service", icon: FileTextIcon },
-		{ href: "/cookies", label: "Cookie Policy", icon: ShieldIcon },
-		{ href: "/gdpr", label: "GDPR", icon: ShieldIcon },
+		{ href: "/privacy", label: "Privacy Policy", icon: LockIcon },
+		{ href: "/terms", label: "Terms of Service", icon: ScaleIcon },
+		{ href: "/cookies", label: "Cookie Policy", icon: CookieIcon },
+		{ href: "/gdpr", label: "GDPR", icon: ShieldCheckIcon },
 	],
 };
 
@@ -88,9 +101,10 @@ export default function Footer() {
 								</span>
 							</Link>
 							<p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-								Your AI-powered learning companion. Connect,
-								collaborate, and grow with personalized learning
-								experiences powered by artificial intelligence.
+								Your intelligent learning companion. Join
+								communities, connect with compatible learning
+								partners, and accelerate your growth with
+								personalized AI-driven experiences.
 							</p>
 						</div>
 
@@ -121,7 +135,6 @@ export default function Footer() {
 							variant="secondary"
 							className="inline-flex items-center gap-2 px-3 py-1.5"
 						>
-							<HeartIcon className="w-3 h-3 text-primary" />
 							Made with ❤️ for learners
 						</Badge>
 					</div>
