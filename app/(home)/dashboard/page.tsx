@@ -171,7 +171,7 @@ export default function DashboardPage() {
 										href={`/chat/${match.id}`}
 										key={match.id}
 									>
-										<Card className="shadow-none">
+										<Card className="shadow-none hover:bg-primary/15 duration-200">
 											<CardHeader>
 												<div className="flex items-center gap-4">
 													<UserAvatar
@@ -242,23 +242,19 @@ export default function DashboardPage() {
 								{userCommunities?.map((community) => (
 									<Card
 										key={community.id}
-										className="shadow-none"
+										className="shadow-none hover:bg-primary/15 duration-200"
 									>
-										<Link
-											href={`/communities/${community.id}`}
-										>
-											<CardHeader>
-												<CardTitle className="text-sm">
-													{community.community.name}
-												</CardTitle>
-												<CardDescription className="text-sm">
-													{
-														community.community
-															.description
-													}
-												</CardDescription>
-											</CardHeader>
-										</Link>
+										<CardHeader>
+											<CardTitle className="text-sm">
+												{community.community.name}
+											</CardTitle>
+											<CardDescription className="text-sm">
+												{
+													community.community
+														.description
+												}
+											</CardDescription>
+										</CardHeader>
 									</Card>
 								))}
 							</div>

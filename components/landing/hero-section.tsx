@@ -1,4 +1,4 @@
-import { CornerUpRight, Lightbulb, SparkleIcon } from "lucide-react";
+import { Lightbulb, Power, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
@@ -12,22 +12,23 @@ export default function HeroSection() {
 			<div className="relative section-container section-padding">
 				<div className="text-center">
 					<Badge
-						className="mb-6 text-sm font-medium p-3 tracking-tight"
+						className="mb-6 text-sm group font-medium p-3 tracking-normal"
 						variant="secondary"
 					>
-						Powered by AI{" "}
-						<SparkleIcon className="size-4 inline-block ml-1" />
+						Powered with AI{" "}
+						<Sparkles className="size-4 inline-block ml-1 group-hover:animate-pulse" />
 					</Badge>
 					<h1>
-						Find Your Perfect{" "}
+						Meet the Right Learning{" "}
 						<span className="block gradient-text">
-							AI Learning Partner
+							Partner for You
 						</span>
 					</h1>
 					<p className="hero-subheading">
-						Join communities, set your learning goals, and get
-						matched with partners who share your passion. Chat,
-						collaborate, and grow together with AI-powered insights.
+						Connect with communities, define your learning goals,
+						and get matched with like-minded learners. Collaborate,
+						chat, and grow together with AI-driven guidance and
+						insights.
 					</p>
 					<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
 						<MotionDiv
@@ -43,7 +44,7 @@ export default function HeroSection() {
 									className="link-button hero-button-outline group"
 								>
 									<span className="hero-button-content">
-										<CornerUpRight className="hero-button-icon-outline group-hover:-rotate-12 group-hover:text-primary" />
+										<Power className="hero-button-icon-outline group-hover:scale-125 group-hover:text-primary" />
 										<span className="hero-button-text">
 											Get Started
 										</span>

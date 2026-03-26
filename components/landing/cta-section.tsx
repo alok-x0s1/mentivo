@@ -4,16 +4,16 @@ import Link from "next/link";
 export default function CtaSection() {
 	return (
 		<section className="section-container section-padding">
-			<div className="border rounded-md p-8 sm:p-12 text-center">
+			<div className="border-dashed border border-foreground/50 rounded-md p-8 sm:p-12 text-center">
 				<div className="max-w-2xl mx-auto">
-					<h2>Stop learning alone</h2>
+					<h2>Learn Better Together</h2>
 					<p className="text-lg mb-8">
-						Get matched with someone who&apos;s learning the same
-						things. Hold each other accountable. Make real progress.
+						Connect with people on the same learning journey,
+						support each other, and achieve your goals faster.
 					</p>
 					<Link href="/sign-up">
 						<Button size="lg" className="px-6 py-5 font-medium">
-							Try it free
+							Try it for free
 						</Button>
 					</Link>
 				</div>

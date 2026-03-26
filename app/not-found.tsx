@@ -88,7 +88,6 @@ export default function NotFound() {
 						</Button> */}
 					</MotionDiv>
 
-					{/* Fun floating elements */}
 					<MotionDiv
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
