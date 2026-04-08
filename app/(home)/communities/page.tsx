@@ -77,11 +77,11 @@ export default function CommunitiesPage() {
 								"Internal Server Error"
 							}
 						/>
-					) : (
-						communities?.map((c) => (
+					) : communities && communities.length > 0 ? (
+						communities.map((c) => (
 							<Button
 								key={c.community.id}
-								className="w-full justify-start"
+								className="w-full justify-start h-10"
 								onClick={() =>
 									setSelectedCommunity(c.community.id)
 								}
@@ -94,6 +94,12 @@ export default function CommunitiesPage() {
 								{c.community.name}
 							</Button>
 						))
+					) : (
+						<CardContent className="p-6 text-center text-foreground/80 text-sm">
+							No communities joined yet <br />
+							Join a community to get started by clicking on more
+							communities.
+						</CardContent>
 					)}
 				</CardContent>
 			</Card>
@@ -148,7 +154,7 @@ export default function CommunitiesPage() {
 									{communityGoals?.map((c) => (
 										<Card
 											key={c.id}
-											className="shadow-none"
+											className="shadow-none hover:bg-primary/15 duration-200"
 										>
 											<CardHeader>
 												<CardTitle className="text-base">
