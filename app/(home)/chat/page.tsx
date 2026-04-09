@@ -66,7 +66,7 @@ export default function ChatPage() {
 						}
 					/>
 				) : pendingMatchesToShow.length === 0 ? (
-					<Card className="w-full border h-50 flex justify-center items-center">
+					<Card className="w-full border-dashed border-foreground/50 h-60 flex justify-center items-center">
 						<CardContent className="p-6 text-center text-foreground/80 text-base">
 							No pending matches yet 🤝 <br />
 							Try joining more communities or adding goals.
@@ -85,7 +85,7 @@ export default function ChatPage() {
 						return (
 							<Card
 								key={match.id}
-								className="flex flex-col max-h-125 min-w-87.5 border"
+								className="flex flex-col max-h-125 min-w-87.5"
 							>
 								<CardHeader>
 									<div className="flex items-center gap-3 mb-2">
@@ -157,7 +157,7 @@ export default function ChatPage() {
 				) : errorMatches ? (
 					<ErrorCard message={errorMatches.message} />
 				) : !acceptedMatches || acceptedMatches.length === 0 ? (
-					<Card className="w-full border h-50 flex justify-center items-center">
+					<Card className="w-full border-dashed border-foreground/50 h-60 flex justify-center items-center shadow-none">
 						<CardContent className="p-6 text-center text-foreground/80 text-base">
 							No active chats yet 💬 <br />
 							Accept a match to start chatting.

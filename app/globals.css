@@ -498,3 +498,7 @@
 ::-webkit-scrollbar {
 	display: none;
 }
+
+[data-slot="dialog-close"] {
+	display: none;
+}
